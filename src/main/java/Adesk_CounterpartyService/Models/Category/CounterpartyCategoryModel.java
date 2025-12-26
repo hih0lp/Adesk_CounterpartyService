@@ -19,6 +19,9 @@ public class CounterpartyCategoryModel {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "company_id")
+    private Long companyId;
+
     @ManyToMany(mappedBy = "categories")
     private Set<CounterpartyModel> counterparties = new HashSet<>();
 }

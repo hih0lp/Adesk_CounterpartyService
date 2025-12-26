@@ -43,6 +43,7 @@ public class CounterpartyCategoryController {
 
             var newCategory = new CounterpartyCategoryModel();
             newCategory.setName(dto.getName());
+            newCategory.setCompanyId(Long.parseLong(request.getHeader("X-Company-Id")));
 
             _counterpartyCategoriesRepository.save(newCategory);
 

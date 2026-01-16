@@ -8,4 +8,5 @@ import java.util.Optional;
 public interface CounterpartyRepository extends JpaRepository<CounterpartyModel, Long> {
     Optional<CounterpartyModel> findByName(String name);
     Optional<CounterpartyModel> findByNameAndCompanyId(String userEmail, Long companyId);
+    Optional<CounterpartyModel> findByCompanyId(Long companyId);
 }

@@ -1,0 +1,5 @@
+services:
+  counterparty:
+    image: adesk_counterparty_service
+    ports:
+      - "8086:8086"

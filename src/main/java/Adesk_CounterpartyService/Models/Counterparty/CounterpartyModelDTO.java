@@ -33,9 +33,9 @@ public class CounterpartyModelDTO {
     public boolean isValid(){
         return companyId != 0 &&
                 name != null && !name.trim().isEmpty() &&
-                categoryName != null && categoryName.trim().isEmpty() &&
-                description != null && description.trim().isEmpty() &&
-                email != null && email.trim().isEmpty() &&
-                number != null && number.trim().isEmpty();
+                categoryName != null && !categoryName.trim().isEmpty() &&
+                description != null && !description.trim().isEmpty() &&
+                email != null && !email.trim().isEmpty() &&
+                number != null && !number.trim().isEmpty();
     }
 }

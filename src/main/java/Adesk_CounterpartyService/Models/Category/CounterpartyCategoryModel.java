@@ -2,6 +2,7 @@ package Adesk_CounterpartyService.Models.Category;
 
 
 import Adesk_CounterpartyService.Models.Counterparty.CounterpartyModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -23,5 +24,6 @@ public class CounterpartyCategoryModel {
     private Long companyId;
 
     @ManyToMany(mappedBy = "categories")
+    @JsonIgnore
     private Set<CounterpartyModel> counterparties = new HashSet<>();
 }
